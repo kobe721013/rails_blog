@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'kaminari'#gem kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 gem 'bootstrap-kaminari-views'#[kobenote]讓view好看一點
-
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
