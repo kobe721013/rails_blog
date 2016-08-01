@@ -4,8 +4,9 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all #翻譯成 select * from users;
-  end
+    #@users = User.all #翻譯成 select * from users;
+    @users = User.page(params[:page]).per(1)#[kobe_notes] kaminari的分頁功能
+    end
 
   # GET /users/1
   # GET /users/1.json
