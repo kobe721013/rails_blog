@@ -13,6 +13,14 @@
   </thead>
 
   <tbody>
+    <!-- 我要render一部份(partial)的頁面
+    這個頁面的實際檔名叫'_user.html.erb'
+    但我要一直重複用這個頁面, 因為我的資料很多筆
+    所以我給一個參數collection:值是@users(複數)
+    這個users可以取出很多個user的變數給partial頁面使用
+    -->
+    <%= render partial:'user', collection:@users, as: :user%>
+    <!--有了上面這一行就可以在抽出部分頁面邏輯
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
@@ -22,6 +30,7 @@
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger"%></td>
       </tr>
     <% end %>
+  -->
   </tbody>
 </table>
 

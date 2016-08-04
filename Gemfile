@@ -34,7 +34,7 @@ gem 'kaminari'#gem kaminari', :git => "git://github.com/amatsuda/kaminari.git", 
 gem 'bootstrap-kaminari-views'#[kobenote]讓view好看一點
 gem 'simple_form'
 gem 'devise'
-
+gem 'slim'#另一種樣板引擎 <=> erb
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use sqlite3 as the database for Active Record

@@ -1,0 +1,11 @@
+<h1>About</h1>
+
+<%= link_to 'Contact', contact_path%>
+
+<%content_for :hole_from_about do%>
+<h2> HI, hole here, i am kobe, age=<%="#{@kobe_age}"%></h2>
+<% end %>
+
+<%= render partial:'components/ad', locals:{price:@total_price,tel:"0926978178"}%>
+
+<%= is_adult?(20)%>

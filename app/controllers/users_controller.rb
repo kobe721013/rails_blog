@@ -5,8 +5,9 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     #@users = User.all #翻譯成 select * from users;
-    @users = User.page(params[:page]).per(1)#[kobe_notes] kaminari的分頁功能
-    end
+    @users = User.page(params[:page]).per(5)#[kobe_notes] kaminari的分頁功能
+    #render @users == 'render partial:'user', collection:@users, as: :user'  
+  end
 
   # GET /users/1
   # GET /users/1.json
@@ -61,6 +62,16 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  module TestHelper
+def is_adult?(age)
+    if age >=18
+    "<h1>成年</h1>".html_safe
+    else
+    "<h1>not yet 成年</h1>".html_safe
+    end 
+  end 
+  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.
